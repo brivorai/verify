@@ -1,6 +1,11 @@
 # @brivora/verify
 
-**5 lines of code to make any AI call verifiable.**
+> 5 lines of code to make any AI call verifiable.
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20-green.svg)](https://nodejs.org)
+
+---
 
 Wrap any AI API call with governance rules and get a cryptographic proof of compliance. PQC-signed Merkle root. Independently verifiable by anyone. No API call. No account. Pure math.
 
