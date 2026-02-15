@@ -205,8 +205,4 @@ interface BrivoraProof {
 
 ## License
 
-AGPL-3.0-or-later
-
----
-
-Built by [Brivora, LLC](https://brivora.dev). Prove, don't trust.
+[AGPL-3.0-or-later](./LICENSE) — [Brivora, LLC](https://brivora.dev)
