@@ -26,7 +26,7 @@ describe('governance packs', () => {
 			const packs = listPacks();
 			expect(packs).toContain('eu-ai-act-v1');
 			expect(packs).toContain('minimal');
-			expect(packs.length).toBeGreaterThanOrEqual(2);
+			expect(packs.length).toBeGreaterThanOrEqual(9);
 		});
 	});
 
