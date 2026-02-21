@@ -82,7 +82,7 @@ function validatePack(
 }
 
 describe('governance packs registry', () => {
-	it('lists all 9 pack entries', () => {
+	it('lists all 24 pack entries', () => {
 		const packs = listPacks();
 		expect(packs).toContain('eu-ai-act-v1');
 		expect(packs).toContain('eu-ai-act-v2');
@@ -93,7 +93,22 @@ describe('governance packs registry', () => {
 		expect(packs).toContain('hipaa-ai');
 		expect(packs).toContain('nist-ai-rmf');
 		expect(packs).toContain('colorado-ai-act');
-		expect(packs.length).toBeGreaterThanOrEqual(9);
+		expect(packs).toContain('texas-traiga');
+		expect(packs).toContain('iso-42001');
+		expect(packs).toContain('nyc-ll144');
+		expect(packs).toContain('south-korea-ai-basic-act');
+		expect(packs).toContain('singapore-ai-governance');
+		expect(packs).toContain('nydfs-ai');
+		expect(packs).toContain('sec-ai');
+		expect(packs).toContain('fda-ai-ml');
+		expect(packs).toContain('china-ai-labeling');
+		expect(packs).toContain('china-cybersecurity-ai');
+		expect(packs).toContain('japan-ai-governance');
+		expect(packs).toContain('iso-27001-ai');
+		expect(packs).toContain('oecd-ai-principles');
+		expect(packs).toContain('california-ai-transparency');
+		expect(packs).toContain('canada-aida');
+		expect(packs.length).toBeGreaterThanOrEqual(24);
 	});
 
 	it('eu-ai-act alias points to v2', () => {
@@ -182,5 +197,140 @@ describe('Colorado AI Act', () => {
 		'transparency',
 		'documentation',
 		'governance',
+	]);
+});
+
+describe('Texas TRAIGA', () => {
+	validatePack('texas-traiga', 12, 0.75, [
+		'prohibited_practices',
+		'nondiscrimination',
+		'transparency',
+		'compliance_readiness',
+	]);
+});
+
+describe('ISO 42001', () => {
+	validatePack('iso-42001', 14, 0.8, [
+		'governance_framework',
+		'risk_management',
+		'transparency_fairness',
+		'operational_controls',
+	]);
+});
+
+describe('NYC Local Law 144', () => {
+	validatePack('nyc-ll144', 12, 0.85, [
+		'bias_audit_compliance',
+		'notice_requirements',
+		'operational_monitoring',
+		'data_protection',
+	]);
+});
+
+describe('South Korea AI Basic Act', () => {
+	validatePack('south-korea-ai-basic-act', 11, 0.8, [
+		'risk_classification',
+		'transparency',
+		'safety_fairness',
+		'operational_compliance',
+	]);
+});
+
+describe('Singapore AI Governance', () => {
+	validatePack('singapore-ai-governance', 12, 0.75, [
+		'governance_structure',
+		'transparency_explainability',
+		'safety_fairness',
+		'data_protection',
+	]);
+});
+
+describe('NYDFS AI', () => {
+	validatePack('nydfs-ai', 10, 0.85, [
+		'fair_insurance',
+		'governance_oversight',
+		'transparency_privacy',
+		'security_compliance',
+	]);
+});
+
+describe('SEC AI', () => {
+	validatePack('sec-ai', 10, 0.85, [
+		'investor_protection',
+		'transparency_disclosure',
+		'governance_controls',
+		'recordkeeping',
+	]);
+});
+
+describe('FDA AI/ML', () => {
+	validatePack('fda-ai-ml', 12, 0.9, [
+		'premarket_compliance',
+		'data_quality',
+		'postmarket_monitoring',
+		'safety_security',
+	]);
+});
+
+describe('China AI Labeling', () => {
+	validatePack('china-ai-labeling', 10, 0.85, [
+		'labeling_compliance',
+		'provider_obligations',
+		'content_safety',
+		'recordkeeping',
+	]);
+});
+
+describe('China Cybersecurity AI', () => {
+	validatePack('china-cybersecurity-ai', 10, 0.9, [
+		'regulatory_compliance',
+		'content_safety',
+		'data_security',
+		'operational_compliance',
+	]);
+});
+
+describe('Japan AI Governance', () => {
+	validatePack('japan-ai-governance', 11, 0.7, [
+		'human_centric_values',
+		'transparency_accountability',
+		'safety',
+		'data_protection',
+	]);
+});
+
+describe('ISO 27001 AI', () => {
+	validatePack('iso-27001-ai', 11, 0.8, [
+		'access_security',
+		'risk_management',
+		'data_protection',
+		'operational_security',
+	]);
+});
+
+describe('OECD AI Principles', () => {
+	validatePack('oecd-ai-principles', 11, 0.7, [
+		'values_fairness',
+		'transparency',
+		'safety_robustness',
+		'accountability_governance',
+	]);
+});
+
+describe('California AI Transparency', () => {
+	validatePack('california-ai-transparency', 10, 0.8, [
+		'training_data_transparency',
+		'content_provenance',
+		'user_transparency',
+		'consumer_protection',
+	]);
+});
+
+describe('Canada AIDA', () => {
+	validatePack('canada-aida', 11, 0.75, [
+		'risk_management',
+		'transparency',
+		'safety_fairness',
+		'compliance_operations',
 	]);
 });

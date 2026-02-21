@@ -67,15 +67,61 @@ Governance packs are data-driven rule definitions — no executable code.
 
 ### Built-in Packs
 
-- `eu-ai-act-v1` — EU AI Act Article 12 compliance (7 rules)
-- `minimal` — Basic logging for testing
+24 governance packs covering US state, US federal, international, and standards-body frameworks:
+
+**EU & International**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `eu-ai-act-v1` | 7 | EU AI Act Article 12 compliance |
+| `eu-ai-act-v2` | 22 | Full EU AI Act (Articles 6-15, 50, 52) |
+| `oecd-ai-principles` | 11 | OECD AI Recommendation (revised May 2024) |
+
+**US Federal**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `nist-ai-rmf` | 12 | NIST AI Risk Management Framework |
+| `hipaa-ai` | 14 | HIPAA applied to AI systems |
+| `sec-ai` | 10 | SEC frameworks applied to AI (PDA rule withdrawn) |
+| `fda-ai-ml` | 12 | FDA AI/ML medical device guidance (PCCP 2024) |
+| `nydfs-ai` | 10 | NYDFS insurance AI + cybersecurity guidance |
+
+**US State**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `colorado-ai-act` | 12 | Colorado AI Act (SB 24-205) |
+| `texas-traiga` | 12 | Texas TRAIGA (HB 149) |
+| `ccpa-admt` | 12 | CCPA/CPRA automated decision-making |
+| `nyc-ll144` | 12 | NYC Local Law 144 bias audits |
+| `california-ai-transparency` | 10 | California AB 2013 + SB 942 |
+
+**Asia-Pacific**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `singapore-ai-governance` | 12 | IMDA Model AI Governance Framework |
+| `japan-ai-governance` | 11 | Japan AI Guidelines + AI Promotion Act |
+| `south-korea-ai-basic-act` | 11 | South Korea AI Basic Act (2026) |
+| `china-ai-labeling` | 10 | China AI content labeling measures |
+| `china-cybersecurity-ai` | 10 | China cybersecurity AI regulatory framework |
+| `canada-aida` | 11 | Canada AIDA (proposed, not enacted) |
+
+**Standards & Certifications**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `soc2-ai` | 12 | SOC 2 AI controls |
+| `iso-42001` | 14 | ISO/IEC 42001:2023 AI management systems |
+| `iso-27001-ai` | 11 | ISO/IEC 27001:2022 mapped to AI security |
+
+**Development**
+| Pack | Rules | Description |
+|------|-------|-------------|
+| `minimal` | 2 | Basic logging for testing |
 
 ```typescript
 // List available packs
-const packs = verify.listPacks(); // ['eu-ai-act-v1', 'minimal']
+const packs = verify.listPacks(); // 24 built-in packs
 
 // Load a pack
-const pack = verify.loadPack('eu-ai-act-v1');
+const pack = verify.loadPack('eu-ai-act-v2');
 ```
 
 ### Custom Packs
